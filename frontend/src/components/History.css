@@ -1,0 +1,141 @@
+/* Shared action button style for perfect alignment */
+.history-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  min-width: 36px;
+  padding: 0.28em 0.9em;
+  font-size: clamp(0.85rem, 2.5vw, 0.98rem);
+  border-radius: 18px;
+  border: 1px solid #aaa;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.13s;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.history-action-btn:focus, .history-action-btn:hover {
+  border-color: #4f8cff;
+  color: #4f8cff;
+  background: rgba(79,140,255,0.08);
+}
+
+.chart-download-btn {
+  border: 1.2px solid rgb(91, 91, 240);
+  background: rgba(91, 91, 240, 0.18);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 12px 0 rgba(91,91,240,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .chart-download-btn {
+    padding: 0.2em 0.6em;
+    gap: 0.3em;
+  }
+}
+
+.chart-download-btn:hover, .chart-download-btn:focus {
+  background: rgba(91, 91, 240, 0.32);
+  color: #fff;
+  border-color: #fff;
+}
+
+.delete-btn {
+  color: #ff3b3b;
+  border: 1px solid transparent;
+  background: transparent;
+  font-weight: 500;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ff7b7b;
+  font-weight: bold;
+}
+
+/* Chart type badge (no border, simple look) */
+.chart-type-badge {
+  display: inline;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  color: inherit;
+  letter-spacing: normal;
+  box-shadow: none;
+  margin: 0;
+}
+
+.modern-download-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(91,91,240,0.22);
+  border-radius: 50%;
+  width: clamp(16px, 4vw, 20px);
+  height: clamp(16px, 4vw, 20px);
+  box-shadow: 0 1.5px 8px 0 rgba(91,91,240,0.10);
+}
+
+.modern-download-icon .icon {
+  color: #fff;
+  width: clamp(10px, 3vw, 13px);
+  height: clamp(10px, 3vw, 13px);
+  display: block;
+}
+
+.modern-download-label {
+  font-size: clamp(0.8rem, 2.5vw, 0.93rem);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 480px) {
+  .modern-download-label {
+    display: none;
+  }
+}
+
+/* Glassy black dropdown (smaller, tighter arrow) */
+.glassy-dropdown {
+  border-radius: 10px;
+  padding: 0.32em 1.5em 0.32em 0.7em;
+  font-size: clamp(0.85rem, 2.5vw, 0.98rem);
+  background: rgba(10, 10, 10, 0.65);
+  color: #fff;
+  border: 1.2px solid #4f8cff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  min-width: clamp(70px, 20vw, 90px);
+  width: clamp(90px, 25vw, 120px);
+  max-width: 150px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234f8cff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7em center;
+  background-size: 14px 8px;
+}
+
+@media (max-width: 768px) {
+  .glassy-dropdown {
+    padding: 0.25em 1.2em 0.25em 0.5em;
+  }
+}
+
+.glassy-dropdown:focus, .glassy-dropdown:hover {
+  border: 1.2px solid #76b2ff;
+  box-shadow: 0 4px 16px 0 rgba(79,140,255,0.18);
+}

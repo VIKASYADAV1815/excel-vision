@@ -1,0 +1,51 @@
+.chart-render-area {
+  width: 100%;
+  min-height: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(79,140,255,0.08);
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Enhanced chart container for better sizing */
+.chart-render-area canvas {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 400px !important;
+  max-height: 600px !important;
+}
+
+/* Responsive chart sizing */
+@media (max-width: 768px) {
+  .chart-render-area {
+    min-height: 400px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .chart-render-area canvas {
+    min-height: 300px !important;
+    max-height: 450px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-render-area {
+    min-height: 350px;
+    padding: 1rem 0.8rem;
+  }
+  
+  .chart-render-area canvas {
+    min-height: 250px !important;
+    max-height: 350px !important;
+  }
+}
+
+.empty-state {
+  color: #b0b3b8;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  text-align: center;
+}

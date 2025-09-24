@@ -1,0 +1,387 @@
+.uploads-page {
+  background: rgba(35, 39, 47, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 1rem;
+  margin: 1rem auto 80px auto;
+  width: 90%;
+  max-width: 800px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #b0b3b8; 
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .uploads-page {
+    padding: 2.5rem 2rem;
+    margin: 1rem auto 120px auto;
+    left: 220px;
+  }
+}
+
+.uploads-page:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.uploads-page h2 {
+  color: #4f8cff;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .uploads-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.upload-drop-area {
+  border: 2px dashed rgba(79, 140, 255, 0.6);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(79, 140, 255, 0.05);
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (min-width: 768px) {
+  .upload-drop-area {
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.upload-drop-area:hover {
+  border-color: #4f8cff;
+  background: rgba(79, 140, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(79, 140, 255, 0.2);
+}
+
+.upload-drop-area p {
+  font-size: 1rem;
+  color: #b0b3b8;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .upload-drop-area p {
+    font-size: 1.1rem;
+  }
+}
+
+.upload-link {
+  color: #4f8cff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.upload-link:hover {
+  color: #6ba1ff;
+}
+
+.file-name {
+  color: #4f8cff;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  background: rgba(79, 140, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  display: inline-block;
+  word-break: break-all;
+}
+
+@media (min-width: 768px) {
+  .file-name {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.excel-preview {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .excel-preview {
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.excel-preview h3 {
+  color: #4f8cff;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .excel-preview h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.excel-preview table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.excel-preview th {
+  background: linear-gradient(135deg, #4f8cff, #6ba1ff);
+  color: white;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .excel-preview th {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.excel-preview td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .excel-preview td {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.excel-preview tr:hover {
+  background: rgba(79, 140, 255, 0.1);
+}
+
+.excel-preview tr:last-child td {
+  border-bottom: none;
+}
+
+.page-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+}
+
+.upload-card {
+  margin-bottom: 80px;
+  width: 90%;
+  max-width: 500px;
+  background: rgba(20, 20, 20, 0.38);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.2px solid rgba(1, 235, 252, 0.18);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+}
+
+@media (min-width: 768px) {
+  .upload-card {
+    margin-bottom: 120px;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.upload-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.32);
+  border: 1.2px solid rgba(1, 235, 252, 0.28);
+}
+
+.input-div {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgb(1, 235, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px rgb(1, 235, 252);
+  animation: flicker 2s linear infinite;
+  margin: 0 auto 1.2rem auto;
+}
+
+@media (min-width: 768px) {
+  .input-div {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0px 0px 100px rgb(1, 235, 252);
+  }
+}
+
+.icon {
+  color: rgb(1, 235, 252);
+  font-size: 1.5rem;
+  cursor: pointer;
+  animation: iconflicker 2s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+}
+
+@keyframes flicker {
+  0% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 50px rgb(1, 235, 252);
+  }
+  5% {
+    border: none;
+    box-shadow: none;
+  }
+  10% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 50px rgb(1, 235, 252);
+  }
+  25% {
+    border: none;
+    box-shadow: none;
+  }
+  30% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 50px rgb(1, 235, 252);
+  }
+  100% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 50px rgb(1, 235, 252);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes flicker {
+    0% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252);
+    }
+    5% {
+      border: none;
+      box-shadow: none;
+    }
+    10% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252);
+    }
+    25% {
+      border: none;
+      box-shadow: none;
+    }
+    30% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252);
+    }
+    100% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252);
+    }
+  }
+}
+
+@keyframes iconflicker {
+  0% { opacity: 1; }
+  5% { opacity: 0.2; }
+  10% { opacity: 1; }
+  25% { opacity: 0.2; }
+  30% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.chart-type-dropdown {
+  border-radius: 12px;
+  padding: 0.25em 1em 0.25em 0.6em;
+  font-size: 0.9rem;
+  background: rgba(30, 30, 30, 0.32);
+  color: #fff;
+  border: 1.2px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  min-width: 60px;
+  width: 80px;
+  max-width: 100px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23D0B486' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6em center;
+  background-size: 12px 6px;
+}
+
+@media (min-width: 768px) {
+  .chart-type-dropdown {
+    padding: 0.28em 1.2em 0.28em 0.7em;
+    font-size: 1rem;
+    min-width: 70px;
+    width: 90px;
+    max-width: 110px;
+    background-size: 14px 8px;
+  }
+}
+
+.chart-type-dropdown:focus,
+.chart-type-dropdown:hover {
+  border: 1.2px solid #D0B486;
+  box-shadow: 0 4px 16px 0 rgba(208,180,134,0.18);
+}

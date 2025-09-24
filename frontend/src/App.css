@@ -1,0 +1,218 @@
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbars for all browsers */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.content-center::-webkit-scrollbar,
+.content::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+#root, .app {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  min-height: calc(100vh - 70px); /* Account for navbar height */
+  height: calc(100vh - 70px);
+  position: relative;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Desktop layout - sidebar visible */
+@media (min-width: 769px) {
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .content-center {
+    width: calc(100% - 250px); /* Account for sidebar width */
+    margin-left: 250px; /* Push content to the right of sidebar */
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+/* Mobile layout - sidebar hidden */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .content-center {
+    width: 100%;
+    margin-left: 0;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    padding-top: 55px;
+  }
+}
+
+.content-center {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  border: none !important;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  max-width: 1200px; /* Set max width for centering */
+  box-sizing: border-box;
+  padding: 1rem;
+  background: none !important;
+  box-shadow: none !important;
+  color: #b0b3b8;
+  transition: all 0.3s ease;
+  border: none !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 auto; /* Center the content */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.content:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 901px) {
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 900px) {
+  .content {
+    padding: 70px 1rem 70px 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 65px 0.8rem 65px 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 60px 0.6rem 60px 0.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    padding: 55px 0.5rem 55px 0.5rem;
+  }
+}
+
+/* Ensure all page containers are responsive */
+@media (max-width: 768px) {
+  .dashboard-container,
+  .admin-page,
+  .profile-page-glass,
+  .profile-edit-bg,
+  .charts-container,
+  .upload-container,
+  .history-container {
+    padding: 1rem 0.5rem;
+    margin: 0.5rem auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container,
+  .admin-page,
+  .profile-page-glass,
+  .profile-edit-bg,
+  .charts-container,
+  .upload-container,
+  .history-container {
+    padding: 0.8rem 0.3rem;
+    margin: 0.3rem auto;
+  }
+}
+
+.content-center,
+.content {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

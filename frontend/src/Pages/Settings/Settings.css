@@ -1,0 +1,404 @@
+.settings-container {
+  max-width: 800px;
+  margin: 6rem auto 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.settings-section:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.settings-section h3 {
+  margin-top: 0;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* Profile section styles */
+.settings-profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.settings-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  margin-right: 20px;
+}
+
+.settings-username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+.settings-email {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Button styles */
+.settings-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-btn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.settings-btn:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  transform: translateY(-2px);
+}
+
+.settings-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.danger-btn {
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+}
+
+.danger-btn:hover {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+/* Form styles */
+.settings-form {
+  margin-top: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(174, 142, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(174, 142, 255, 0.2);
+}
+
+/* Theme options */
+.theme-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.theme-btn.active {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+}
+
+/* Notification options */
+.notification-options {
+  margin-top: 10px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #a777e3;
+}
+
+/* Status messages */
+.settings-loading,
+.settings-error,
+.settings-success {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.settings-loading {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+}
+
+.settings-error {
+  background: rgba(255, 87, 87, 0.2);
+  color: #ff5757;
+}
+
+.settings-success {
+  background: rgba(87, 255, 173, 0.2);
+  color: #57ffa5;
+}
+
+/* Coming soon features */
+.coming-soon-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature-card h4 {
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsive design for Settings page */
+@media (max-width: 1400px) {
+  .settings-container {
+    max-width: 750px;
+    padding: 18px;
+  }
+  
+  .settings-section {
+    padding: 18px;
+  }
+  
+  .settings-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .settings-avatar {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .settings-container {
+    max-width: 700px;
+    padding: 16px;
+  }
+  
+  .settings-section {
+    padding: 16px;
+  }
+  
+  .settings-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .settings-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    max-width: 95%;
+    padding: 15px;
+    margin: 1rem auto;
+  }
+  
+  .settings-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .settings-profile-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .settings-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .settings-buttons {
+    justify-content: center;
+  }
+  
+  .settings-btn {
+    min-width: 100px;
+  }
+  
+  .coming-soon-features {
+    flex-direction: column;
+  }
+  
+  .feature-card {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    max-width: 98%;
+    padding: 12px;
+    margin: 0.5rem auto;
+  }
+  
+  .settings-section {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .settings-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .settings-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .settings-username {
+    font-size: 1.1rem;
+  }
+  
+  .settings-email {
+    font-size: 0.85rem;
+  }
+  
+  .settings-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .settings-container {
+    padding: 10px;
+  }
+  
+  .settings-section {
+    padding: 10px;
+  }
+  
+  .settings-section h3 {
+    font-size: 1rem;
+  }
+  
+  .settings-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .settings-username {
+    font-size: 1rem;
+  }
+  
+  .settings-email {
+    font-size: 0.8rem;
+  }
+  
+  .feature-card {
+    padding: 12px;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+}

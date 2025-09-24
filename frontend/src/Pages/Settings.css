@@ -1,0 +1,54 @@
+.settings-container {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  background: rgba(30, 30, 30, 0.38);
+  border-radius: 22px;
+  border: 1.5px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  padding: 2.5rem 2rem;
+  color: #e3e3e3;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.settings-section {
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(40, 40, 50, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  margin-top: 1.2rem;
+}
+.settings-section:last-child {
+  border-bottom: none;
+}
+.settings-section h3 {
+  color: #D0B486;
+  margin-bottom: 0.7rem;
+  font-size: 1.18rem;
+}
+.settings-btn {
+  background: rgba(79,140,255,0.85);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.3em;
+  font-size: 1rem;
+  margin-right: 1em;
+  margin-bottom: 0.7em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(79,140,255,0.08);
+}
+.settings-btn:disabled {
+  background: #23272f;
+  color: #b0b3b8;
+  cursor: not-allowed;
+}
+label {
+  font-size: 1rem;
+  color: #e3e3e3;
+  margin-right: 1.2em;
+} 
