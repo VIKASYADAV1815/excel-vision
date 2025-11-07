@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Default to same-origin '/api' in production; override via VITE_API_URL locally
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 // Auth
 export const login = (data) => axios.post(`${API_BASE}/auth/login`, data);
