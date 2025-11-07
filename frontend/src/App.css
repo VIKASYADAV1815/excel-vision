@@ -51,14 +51,14 @@ body::-webkit-scrollbar,
 /* Desktop layout - sidebar visible */
 @media (min-width: 769px) {
   .main {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 250px;
+    width: calc(100% - 250px);
   }
   
   .content-center {
-    width: calc(100% - 250px); /* Account for sidebar width */
-    margin-left: 250px; /* Push content to the right of sidebar */
-    height: calc(100vh - 70px);
+    width: 100%; /* Account for sidebar width */
+    margin-left: 360px; /* Push content to the right of sidebar */
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0;

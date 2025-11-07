@@ -9,8 +9,6 @@ import { MdSpaceDashboard } from "react-icons/md";
 import { RiBarChartBoxAiFill } from "react-icons/ri";
 import { MdManageHistory } from "react-icons/md";
 import { CiSettings } from "react-icons/ci";
-
-import logo from '../../assets/logo.png';
 const sidebarOptions = [
   { id: 'dashboard', label: 'Dashboard', to: '/', icon: MdSpaceDashboard },
   { id: 'uploads', label: 'Uploads', to: '/uploads', icon: IoIosCloudUpload },
@@ -196,10 +194,11 @@ const Navbar = ({ onHamburgerClick }) => {
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         {isMobile && (
           <div className="mobile-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem' }}>
-            <img src={logo} alt="Logo" style={{ height: '2rem' }} />
+            <span style={{ fontSize: '1.5rem', color: '#4f8cff' }}>📊</span>
+            <span style={{ fontSize: '1.1rem', fontWeight: '700', color: '#b0b3b8' }}>Excel Vision</span>
           </div>
         )}
-        <div className="navbar-greeting btn-shine" style={{ flex: 1 }}>Welcome, {user?.name || user?.username || 'User'} ! <span style={{ filter: 'none' }}></span></div>
+        <div className="navbar-greeting btn-shine" style={{ flex: 1 }}>Welcome, {user?.name || user?.username || 'User'}!</div>
         {isMobile && (
           <button
             className="hamburger"

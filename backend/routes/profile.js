@@ -5,7 +5,8 @@ const authMiddleware = require('../middleware/auth');
 const User = require('../models/User');
 
 // POST /api/profile/photo - Upload profile picture
-router.post('/photo', authMiddleware, upload.single('photo'), async (req, res) => {
+// Accept frontend field name 'profilePic' for consistency
+router.post('/photo', authMiddleware, upload.single('profilePic'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ msg: 'No file uploaded' });

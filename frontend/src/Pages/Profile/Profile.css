@@ -337,6 +337,18 @@
   margin-top: 1rem;
 }
 
+/* Keep actions visible near bottom and above fixed footer */
+.form-actions.sticky {
+  position: sticky;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.5rem 0.25rem;
+  z-index: 5;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .cancel-btn {
   flex: 1;
   padding: 0.85rem 1rem;

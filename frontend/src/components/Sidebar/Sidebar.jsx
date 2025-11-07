@@ -81,8 +81,8 @@ export default function Sidebar() {
 const StyledSidebar = styled.aside`
   position: fixed;
   left: 0;
-  top: 0; /* Adjusted to top */
-  height: 100vh; /* Full viewport height */
+  top: 0; /* Start below navbar */
+  height: 100vh; /* Full height minus navbar */
   width: 250px;
   background: rgb(13, 13, 13);
   padding: 20px;
@@ -93,9 +93,9 @@ const StyledSidebar = styled.aside`
   }
   
   .sidebar-logo {
-    padding: 0.5rem; /* Reduced padding */
+    padding: 1rem;
     text-align: center;
-    margin-bottom: 1.5rem; /* Reduced margin */
+    margin-bottom: 2rem;
     
     .logo-img {
       max-width: 150px;

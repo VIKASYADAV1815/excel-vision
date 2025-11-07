@@ -41,7 +41,8 @@ const EditProfile = () => {
         setUploadProgress(10);
         
         const formData = new FormData();
-        formData.append('photo', file);
+        // Backend expects 'profilePic' field name
+        formData.append('profilePic', file);
         
         const token = localStorage.getItem('token');
         setUploadProgress(30);
@@ -120,114 +121,28 @@ const EditProfile = () => {
     <div className="edit-profile-container" style={{
       backgroundImage: `url(${bg2})`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      minHeight: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '20px'
+      backgroundPosition: 'center'
     }}>
-      <div className="profile-edit-glass" style={{
-        maxWidth: '500px',
-        width: '100%',
-        padding: '25px',
-        borderRadius: '15px',
-        backgroundColor: 'rgba(22, 24, 29, 0.8)',
-        backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-        color: '#fff'
-      }}>
-        <div className="edit-profile-header" style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '20px'
-        }}>
-          <h2 style={{ margin: 0, color: '#fff' }}>Edit Profile</h2>
+      <div className="profile-edit-glass">
+        <div className="edit-profile-header">
+          <h2>Edit Profile</h2>
           <button 
             type="button" 
+            className="back-btn"
             onClick={() => navigate('/profile')}
-            style={{
-              padding: '8px 15px',
-              borderRadius: '5px',
-              border: 'none',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: '#fff',
-              cursor: 'pointer'
-            }}
           >
             ← Back
           </button>
         </div>
         
-        {success && <div style={{
-          padding: '10px',
-          backgroundColor: 'rgba(47, 129, 90, 0.2)',
-          color: '#4ade80',
-          borderRadius: '5px',
-          marginBottom: '15px'
-        }}>{success}</div>}
-        {error && <div style={{
-          padding: '10px',
-          backgroundColor: 'rgba(220, 38, 38, 0.2)',
-          color: '#ef4444',
-          borderRadius: '5px',
-          marginBottom: '15px'
-        }}>{error}</div>}
+        {success && <div className="profile-success-msg">{success}</div>}
+        {error && <div className="profile-error-msg">{error}</div>}
         
-        <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '10px' }}>
-            <img 
-              src={form.profilePic} 
-              alt="Profile"
-              style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                border: '2px solid rgba(255, 255, 255, 0.1)'
-              }}
-            />
-            <button
-              type="button"
-              onClick={() => fileInputRef.current.click()}
-              disabled={isUploading}
-              style={{
-                padding: '8px 15px',
-                backgroundColor: 'rgba(59, 130, 246, 0.5)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer'
-              }}
-            >
-              {isUploading ? 'Uploading...' : 'Change Picture'}
-            </button>
-            <input
-              type="file"
-              accept="image/*"
-              style={{ display: 'none' }}
-              ref={fileInputRef}
-              onChange={handleAvatarChange}
-            />
-          </div>
+        <form onSubmit={handleSave} className="profile-edit-form" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+          {/* Avatar block removed per request - only input fields remain */}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={form.name}
-              onChange={handleChange}
-              style={{
-                padding: '8px',
-                borderRadius: '5px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                color: '#fff'
-              }}
-            />
+            {/* Full name field removed to simplify per request */}
             
             <input
               type="text"
@@ -293,37 +208,18 @@ const EditProfile = () => {
             />
           </div>
           
-          <div style={{ 
-            display: 'flex', 
-            gap: '10px', 
-            justifyContent: 'flex-end',
-            marginTop: '10px'
-          }}>
+          <div className="form-actions sticky">
             <button 
               type="submit" 
               disabled={loading || isUploading}
-              style={{
-                padding: '8px 20px',
-                backgroundColor: 'rgba(59, 130, 246, 0.5)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer'
-              }}
+              className="profile-save-btn"
             >
               {loading ? 'Saving...' : 'Save Changes'}
             </button>
             <button 
               type="button" 
+              className="cancel-btn"
               onClick={() => navigate('/profile')}
-              style={{
-                padding: '8px 20px',
-                backgroundColor: 'rgba(220, 38, 38, 0.5)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer'
-              }}
             >
               Cancel
             </button>

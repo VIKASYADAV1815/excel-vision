@@ -60,7 +60,8 @@ const Profile = () => {
       const file = new File([blob], 'profile-photo.jpg', { type: 'image/jpeg' });
 
       const formData = new FormData();
-      formData.append('photo', file);
+      // Backend expects 'profilePic' field name
+      formData.append('profilePic', file);
 
       const result = await uploadProfilePhoto(formData, token);
       
